@@ -1,0 +1,69 @@
+{
+    "name": "coinflip",
+    "methods": [
+        {
+            "name": "hello",
+            "args": [
+                {
+                    "type": "string",
+                    "name": "name"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            }
+        },
+        {
+            "name": "start_game",
+            "args": [
+                {
+                    "type": "pay",
+                    "name": "payment"
+                },
+                {
+                    "type": "string",
+                    "name": "choice"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            },
+            "desc": "Player A initiates the game, pays the wager, and chooses the coin side.\nIf the player hasn't opted in, they will be automatically opted in."
+        },
+        {
+            "name": "join_game",
+            "args": [
+                {
+                    "type": "pay",
+                    "name": "payment"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            },
+            "desc": "Player B joins the game, gets the remaining coin side, and pays the wager.\nIf Player B hasn't opted in, they will be automatically opted in."
+        },
+        {
+            "name": "resolve_game",
+            "args": [
+                {
+                    "type": "account",
+                    "name": "opp"
+                }
+            ],
+            "returns": {
+                "type": "string"
+            },
+            "desc": "Player A resolves the game, win counter updates and the wager pays out to the player who won"
+        },
+        {
+            "name": "check_wins",
+            "args": [],
+            "returns": {
+                "type": "uint64"
+            },
+            "desc": "Check personal number of coinflip wins"
+        }
+    ],
+    "networks": {}
+}
